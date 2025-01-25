@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Accessibility Tool",
+  "version": "1.0",
+  "description": "A tool similar to UserWay to improve web accessibility.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["images/tool-icon.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
