@@ -4,26 +4,63 @@
     <title>Inject Tool Icon</title>
     <style>
       body {
+        width: 300px;
+        padding: 20px;
         font-family: Arial, sans-serif;
-        padding: 10px;
       }
-      button {
-        display: block;
-        margin: 10px 0;
-        padding: 5px;
-        width: 100%;
-        background: #333;
-        color: #fff;
-        border: none;
-        cursor: pointer;
+
+      .description {
+        margin-bottom: 20px;
+        line-height: 1.5;
+        color: #333;
       }
-      button:hover {
-        background: #555;
+
+      .donate-btn {
+        text-align: center;
+      }
+
+      .donate-link {
+        text-align: center;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ffc72c;
+        color: #000;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .donate-link:hover {
+        background-color: #ffb700;
       }
     </style>
   </head>
   <body>
-    <button id="injectToolIcon">Inject Tool Icon</button>
+    <div class="container">
+      <div class="description">
+        <h3>Welcome to our Accessibility Tool!</h3>
+        <p>
+          This tool is completely free and designed to make web content more
+          accessible for everyone.
+        </p>
+        <p>
+          We're committed to helping people who need this tool to better
+          navigate the web. The tool will automatically activate on webpages you
+          visit.
+        </p>
+        <p>
+          If you find this tool helpful, please consider supporting our work:
+        </p>
+      </div>
+      <div class="donate-btn">
+        <a
+          href="https://webease-hub.web.app/donate"
+          target="_blank"
+          class="donate-link"
+          >Support Us</a
+        >
+      </div>
+    </div>
     <script src="popup.js"></script>
   </body>
 </html>

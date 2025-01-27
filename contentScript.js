@@ -55,15 +55,19 @@ function injectAccessibilityPopup() {
   document.body.appendChild(popup);
 
   // Close button functionality
-  document.querySelector('.accessibility-popup-close').addEventListener('click', () => {
-    popup.remove();
-  });
+  document
+    .querySelector('.accessibility-popup-close')
+    .addEventListener('click', () => {
+      popup.remove();
+    });
 
   // Accessibility features
   let fontSize = 100;
-  
-  const bodyElements = document.body.querySelectorAll('*:not(#accessibility-popup):not(#accessibility-popup *)'); // Exclude the tool popup and its children
-  
+
+  const bodyElements = document.body.querySelectorAll(
+    '*:not(#accessibility-popup):not(#accessibility-popup *)'
+  ); // Exclude the tool popup and its children
+
   document.getElementById('increaseFont').addEventListener('click', () => {
     fontSize += 10;
     bodyElements.body.style.fontSize = fontSize + '%';
